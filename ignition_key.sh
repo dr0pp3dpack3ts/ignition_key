@@ -55,10 +55,10 @@ then
 	echo "export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> ~/.bashrc
 fi
 
-BLUE "Installing SimpleScreenRecorder..."
-echo "" | sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
-sudo apt-get update
-sudo apt-get install -y simplescreenrecorder
+#BLUE "Installing SimpleScreenRecorder..."
+#echo "" | sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
+#sudo apt-get update
+#sudo apt-get install -y simplescreenrecorder
 
 BLUE "Installing task..."
 sudo apt-get install -y taskwarrior
@@ -78,10 +78,10 @@ sudo apt-get install -y openvpn
 BLUE "Installing nmap..."
 sudo apt-get install -y nmap
 
-BLUE "Installing docker..."
-sudo apt-get install -y docker.io
-sudo groupadd docker
-sudo usermod -aG docker `logname`
+#BLUE "Installing docker..."
+#sudo apt-get install -y docker.io
+#sudo groupadd docker
+#sudo usermod -aG docker `logname`
 
 BLUE "Installing curl..."
 sudo apt-get install -y curl
@@ -101,27 +101,27 @@ sudo apt-get install -y sqlitebrowser
 BLUE "Installing Wireshark..."
 sudo apt-get install -y wireshark
 
-BLUE "Install Real VNC Viewer..."
-wget "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.17.1113-Linux-x64.deb" -O vnc_viewer.deb
-dpkg -i vnc_viewer.deb
-rm vnc_viewer.deb
+#BLUE "Install Real VNC Viewer..."
+#wget "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.17.1113-Linux-x64.deb" -O vnc_viewer.deb
+#dpkg -i vnc_viewer.deb
+#rm vnc_viewer.deb
 
-BLUE "Install Real VNC Connect (Server)..."
-wget 'https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.2.1-Linux-x64.deb' -O vnc_server.deb
-dpkg -i vnc_server.deb
-rm vnc_server.deb
+#BLUE "Install Real VNC Connect (Server)..."
+#wget 'https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.2.1-Linux-x64.deb' -O vnc_server.deb
+#dpkg -i vnc_server.deb
+#rm vnc_server.deb
 
-BLUE "Adding VNC Connect (Server) service to the default startup /etc/rc.local..."
-grep "vncserver-x11-serviced.service" /etc/rc.local
-if [ $? -eq 1 ]
-then
-	echo "systemctl start vncserver-x11-serviced.service" >> ~/etc/rc.local
-fi
+#BLUE "Adding VNC Connect (Server) service to the default startup /etc/rc.local..."
+#grep "vncserver-x11-serviced.service" /etc/rc.local
+#if [ $? -eq 1 ]
+#then
+#	echo "systemctl start vncserver-x11-serviced.service" >> ~/etc/rc.local
+#fi
 
-BLUE "Installing Atom..."
-wget "https://atom.io/download/deb" -O atom.deb
-dpkg -i atom.deb
-rm atom.deb
+#BLUE "Installing Atom..."
+#wget "https://atom.io/download/deb" -O atom.deb
+#dpkg -i atom.deb
+#rm atom.deb
 
 BLUE "Installing python-requests..."
 pip install requests
@@ -203,13 +203,13 @@ sudo apt install -y pdfcrack
 BLUE "Installing Virtualbox..."
 sudo apt install -y virtualbox-qt
 
-BLUE "Installing Vagrant..."
-sudo apt install -y vagrant
+#BLUE "Installing Vagrant..."
+#sudo apt install -y vagrant
 
-BLUE "Installing Hopper..."
-wget "https://d2ap6ypl1xbe4k.cloudfront.net/Hopper-v4-4.3.14-Linux.deb"
-dpkg -i Hopper-v4-4.3.14-Linux.deb
-rm Hopper-v4-4.3.14-Linux.deb
+#BLUE "Installing Hopper..."
+#wget "https://d2ap6ypl1xbe4k.cloudfront.net/Hopper-v4-4.3.14-Linux.deb"
+#dpkg -i Hopper-v4-4.3.14-Linux.deb
+#rm Hopper-v4-4.3.14-Linux.deb
 
 
 BLUE "Installing Oracle Java 8..."
@@ -252,8 +252,8 @@ sudo apt install -y gimp
 BLUE "Installing cmake..."
 sudo apt install -y cmake
 
-BLUE "Installing mplayer..."
-sudo apt install -y mplayer
+#BLUE "Installing mplayer..."
+#sudo apt install -y mplayer
 
 
 BLUE "Installing sshpass..."
@@ -265,8 +265,8 @@ sudo apt install -y tcpflow
 BLUE "Installing Python scapy..."
 sudo pip install scapy
 
-BLUE "Installing the thing that 7z2john.pl needs..."
-sudo apt install libcompress-raw-lzma-perl 
+#BLUE "Installing the thing that 7z2john.pl needs..."
+#sudo apt install libcompress-raw-lzma-perl 
 
-BLUE "Installing dos2unix..."
-sudo apt install libcompress-raw-lzma-perl
+#BLUE "Installing dos2unix..."
+#sudo apt install libcompress-raw-lzma-perl
